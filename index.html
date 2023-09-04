@@ -2,19 +2,37 @@
 <html>
 <head>
   <title>ontheboard - chess</title>
-  <link rel="stylesheet" href="default.css">
+  <link rel="stylesheet" href="./default.css">
 </head>
 <body>
   <h1>Index</h1>
-  <p><a href="./matingpatterns.html">Checkmate Patterns</a></p>
-  <p><a href="./chessix.html">Chessix</a> (hopefully coming soon!) - a <a href="https://en.wikipedia.org/wiki/Los_Alamos_chess">Los Alamos</a> style <a href="https://en.wikipedia.org/wiki/Minichess">Minichess</a> variant, programmed in Lua for the TIC-80 environment.</p>
+
+  <h3><a href="./matingpatterns.html">Checkmate Patterns</a></h3>
+
+  <h3><a href="./chessix/play.html">Chessix</a></h3>
+  <p>Chessix is a<a href="https://en.wikipedia.org/wiki/Los_Alamos_chess">Los Alamos</a> style <a href="https://en.wikipedia.org/wiki/Minichess">Minichess</a> variant, played on a six by six square board, programmed in <a href="https://www.lua.org/about.html">Lua</a> for the <a href="https://en.wikipedia.org/wiki/TIC-80">TIC-80</a> environment.</p>
+  <p>Rules for this minichess variant are the same as for normal chess, except that there is no castling, no double pawn move, and no taking en-passant. Chessix deviates from the classic Los Alamos variant in that it allows you to promote to bishops - as well as queens, rooks, and knights.</p>
+  <p></p>
+  <p>
+    <a href="./chessix/play.html">
+    <img source="./chessix/chessix.png" width="25%" height="25%" />
+    </a>
+  </p>
+  <h4>Limitations of Chessix</h4>
+  <p>Chessix is running in an emulated environment, using Lua code, on top of a browser that uses JavaScript, and as such it will be slower than many chess programs.</p>
+  <p>Chessix does not use neural networks, and as such will not present a robust tactical challenge, nor have whatever advantage of speed comes from using neural networks.</p>
+  <p>TIC-80 does not make available commands for export of data, because of which Chessix does not allow saving or export of games.</p>
+  
+  <h2>Please note</h2>
   <p>This site is under construction.</p>
   <p>Thank you for your patience.</p>
+
+  <h2>Coming soon</h2>
+  <p>Chess basics, tactics, openings.</p>
+  <p>Chess strategies, world champions, notable players.</p>
+  <p>Articles on programming non-neural-network chess programs.</p>
+
   <h2>About</h2>
-  <p>Coming soon: basics, tactics, openings.</p>
-  <p>Coming soon: formatting for this index page to make it look nicer.</p>
-  <p>Coming sometime: strategies, world champions, notable players.</p>
-  <p>Coming sometime: articles on programming non-neural-network chess programs.</p>
   <p>Hosted on: github pages<br />github is a site for software development and version control (<a href="https://en.wikipedia.org/wiki/GitHub">wikipedia entry</a>).</p>
   <p>Quick mention to <a href="https://tic80.com/">TIC-80</a> the Lua based programming environment I'm currently programming in for fun.</p>
 </body>
