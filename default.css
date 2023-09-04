@@ -21,6 +21,14 @@ background-color:lightgray;
 clear:both;
 }
 
+h3{
+    margin-top:1em;
+    margin-bottom:1em;
+    text-align:left;
+    background-color:lightgray;
+    clear:both;
+}
+
 br{
 clear:left;
 }
