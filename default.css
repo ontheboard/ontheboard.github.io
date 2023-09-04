@@ -1,0 +1,83 @@
+body{border:0px;padding:0px;margin:0px;background-color:white;}
+
+div#skillarea{margin:auto;width:80em;}
+div#skillarea div{display:inline-block;margin:auto;width:80em;}
+
+p{border:0px;padding:5px;margin:5px;}
+h1,h2,h3,h4,h5,h6{border:0px;padding:0px;margin:0px;
+padding-left:4px;
+}
+
+h1{
+text-align:left;
+background-color:lightgray;
+clear:both;
+}
+
+h2{
+margin-top:0.5em;
+text-align:left;
+background-color:lightgray;
+clear:both;
+}
+
+br{
+clear:left;
+}
+
+table{
+border:0px;padding:0px;
+display:inline-block;vertical-align:top;
+margin:1em;right-margin:0em;bottom-margin:0em;
+}
+
+
+table, td{border-collapse:collapse;}
+
+tr{border:0px;padding:0px;margin:0px;width:0px;height:0px;background-color:white}
+
+td{
+padding:0px;margin:0px;border:0.1em solid black;
+font-size:1.5em;
+width:1.3em;height:1.3em;
+text-align:center;vertical-align:middle;
+}
+
+
+td.black{background-color:lightgray}
+td.white{background-color:white}
+
+td.top{border-top:0.4em inset black;}
+td.left{border-left:0.4em inset black;}
+td.right{border-right:0.4em outset black;}
+td.bottom{border-bottom:0.4em outset black;}
+
+td.info{
+border:none;
+font-size:1em;
+width:14em;
+height:1.5em;
+text-align:center;vertical-align:middle;
+}
+
+td.key{
+border:1px solid black;
+font-size:1em;
+height:1.5em;
+text-align:center;
+vertical-align:middle;
+padding:.1em;
+}
+
+caption {
+border:1px solid black;
+padding:.1em;
+font-weight:bold;
+}
+
+td.coord{
+background:none;
+border:none;
+font-size:1em;
+text-align:center;vertical-align:middle;
+}
