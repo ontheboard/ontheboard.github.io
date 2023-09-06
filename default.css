@@ -44,7 +44,7 @@ table, td{border-collapse:collapse;}
 
 tr{border:0px;padding:0px;margin:0px;width:0px;height:0px;background-color:white}
 
-td{
+td.square{
 padding:0px;margin:0px;border:0.1em solid black;
 font-size:1.5em;
 width:1.3em;height:1.3em;
@@ -89,3 +89,41 @@ border:none;
 font-size:1em;
 text-align:center;vertical-align:middle;
 }
+
+th{
+    border:1px solid black;
+    font-size:1em;
+    height:1.5em;
+    text-align:center;
+    vertical-align:middle;
+    padding:.1em;
+    
+}
+
+td{
+    border:1px solid black;
+    font-size:1em;
+    height:1.5em;
+    text-align:center;
+    vertical-align:middle;
+    padding:.1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,60 +1,98 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ontheboard - TIC-80</title>
+  <title>Chess program index</title>
   <link rel="stylesheet" href="./default.css">
 </head>
 <body>
-
-  <h3>Navigation</h3>
+  <h1>Chess program index</h1>
+  <h2>Navigation</h2>
   <p><a href="../index.html">Index</a></p>
 
   <h2>TIC-80</h2>
   <p>
+    This page is the index for a few chess programs for the TIC-80 emulator, and perhaps some other programs too.
+  </p>
+  <p>
       <a href="https://tic80.com/"">TIC-80</a> is 'a free and open-source fantasy video game console for making, playing, and sharing games on a limited platform that mimics the 8-bit systems of the 1980s.' (Source: <a href="https://en.wikipedia.org/wiki/TIC-80">wikipedia</a>)
   </p>
   <p>
-      A variety of programming languages can be used with TIC-80, amongst them the easy to use <a href="https://www.lua.org/about.html">Lua</a>.
+      A variety of programming languages can be used with TIC-80, amongst them the easy to use <a href="https://www.lua.org/about.html">Lua</a>, which is what the programs here use.
   </p>
-  <p>
-      Presented here are a few chess programs for the TIC-80 emulator, and perhaps some other programs too.
-  </p>
+  <h4>Limitations of TIC-80</h4>
+  <p>'As a fantasy console, TIC-80 has some set limitations in terms of graphics and processing power in order to create a "retro-styled" gaming experience. These limitations include a 240x136 display; a 16 color palette; 256 8x8 sprites; and 4-channel sound.'<br />(Source: wikipedia. Date of access: 6th September 2023)</p>
+  <p>TIC-80 programs run in an emulated environment. This can make them slower than programs/apps which run natively on a computer. Furthermore, TIC-80 programs for the web run on top of a browser that uses JavaScript, and as such will be slower still.</p>
 
-  <h3>Chessix</h3>
-  <p><a href="./chessix/play.html">Chessix</a> is a <a href="https://en.wikipedia.org/wiki/Los_Alamos_chess">Los Alamos</a> style <a href="https://en.wikipedia.org/wiki/Minichess">Minichess</a> variant, played on a six by six square board, programmed in <a href="https://www.lua.org/about.html">Lua</a> for the <a href="https://en.wikipedia.org/wiki/TIC-80">TIC-80</a> environment.</p>
-  <p>Rules for this minichess variant are the same as for normal chess, except that there is no castling, no double pawn move, and no taking en-passant. Chessix deviates from the classic Los Alamos variant in that it allows you to promote to bishops - as well as queens, rooks, and knights.</p>
-  <p>Chessix can be played with a touch screen, with a controller, with a mouse, or with the keyboard. The keyboard uses the cursor keys to move about the squares, 'z' to select a piece or select where to move it to, 'x' to flip the board, and 'a' and 's' to move back and forwards through the moves already made. These keys correspond to functions for the first four buttons of a controller.</p>
-  <p>Chessix has five levels, of which level 1 is the easiest and level 5 the hardest (and slowest). Levels 4 and 5 are not recommended due to the slow play - if you choose to play against this high a level, I recommend you plug your device in to charge.</p>
-  <h4>Chessix level summary</h4>
-  <p>Depth of search in plies (half-moves).</p>
-  <ol>
-    <li>1 to 2</li>
-    <li>2 to 4</li>
-    <li>3 to 4</li>
-    <li>3 to 5</li>
-    <li>4 to 6</li>    
-  </ol>
+  <h4>Limitations of the chess programs here</h4>  
+  <p>Unless otherwise stated, these chess programs do not use neural networks, and as such will not present a robust tactical challenge, nor have whatever advantage of speed comes from using neural networks. This can be seen as being in the spirit of programming for a retro console.</p>
+  <p>TIC-80 does not make available commands for export of data, because of which the chess programs here do not allow saving or export of games.</p>
+
+  <h2>Chessix</h2>
   <p>
     <a href="./chessix/play.html">
     <img src="./chessix/chessix.png" width="488px" height="240px" alt="six by six square chessboard with checkmate position" />
     </a>
   </p>
+  <p><a href="./chessix/play.html">Chessix</a> is a <a href="https://en.wikipedia.org/wiki/Los_Alamos_chess">Los Alamos</a> style <a href="https://en.wikipedia.org/wiki/Minichess">Minichess</a> variant, played on a six by six square board, programmed in <a href="https://www.lua.org/about.html">Lua</a> for the <a href="https://en.wikipedia.org/wiki/TIC-80">TIC-80</a> environment.</p>
+  <p>Rules for this minichess variant are the same as for normal chess, except that there is no castling, no double pawn move, and no taking en-passant. Chessix deviates from the classic Los Alamos variant in that it allows you to promote to bishops - as well as queens, rooks, and knights.</p>
+  <p>Chessix can be played with a touch screen, with a controller, with a mouse, or with the keyboard.</p>
+  <h4>Chessix keyboard controls</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>key</th><th>action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>cursor keys</td><td>movement on the board</td>
+      </tr>
+      <tr>
+        <td>z</td><td>select a piece<br />select square to move selected piece to</td>
+      </tr>
+      <tr>
+        <td>x</td><td>rotate the board</td>
+      </tr>
+      <tr>
+        <td>a</td><td>take-back</td>
+      </tr>
+      <tr>
+        <td>s</td><td>trace-forwards</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>These keys correspond to functions for the first four buttons of a controller.</p>
+  <h4>Chessix level summary</h4>
+  <p>Chessix has five levels, of which level 1 is the easiest and level 5 the hardest (and slowest). Levels 4 and 5 are not recommended due to the slow play - if you choose to play against this high a level, I recommend you plug your device in to charge.</p>
+  <p>Depth of search in plies (half-moves).</p>
+  <table>
+    <thead>
+      <tr>
+        <th>level</th>
+        <th>min search depth</th>
+        <th>max search depth</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>1</td><td>2</td></tr>
+      <tr><td>2</td><td>2</td><td>4</td></tr>
+      <tr><td>3</td><td>3</td><td>4</td></tr>
+      <tr><td>4</td><td>3</td><td>6</td></tr>
+      <tr><td>5</td><td>4</td><td>6</td></tr>
+    </tbody>
+  </table>
   <p><a href="./chessix/play.html">Play Chessix</a></p>
-  <h4>Limitations of Chessix</h4>
-  <p>Chessix is running in an emulated environment, using Lua code, on top of a browser that uses JavaScript, and as such it will be slower than many chess programs.</p>
-  <p>Chessix does not use neural networks, and as such will not present a robust tactical challenge, nor have whatever advantage of speed comes from using neural networks.</p>
-  <p>TIC-80 does not make available commands for export of data, because of which Chessix does not allow saving or export of games.</p>
 
-  <h3>Skier</h3>
-  <p>
-      A retro downhill slalom game. Avoid the trees and rocks. Ski close to the flags to get points.
-  </p>
+  <h2>Skier</h2>
   <p>
     <a href="./skier/play.html">
     <img src="./skier/skier.png" width="488px" height="240px" alt="screenshot of skier game" />
     </a>
   </p>
-   <p><a href="./skier/play.html">Play Skier</a></p>
+  <p>
+    A retro downhill slalom game. Avoid the trees and rocks. Ski close to the flags to get points.
+  </p>
+  <p><a href="./skier/play.html">Play Skier</a></p>
   
 </body>
 </html>
