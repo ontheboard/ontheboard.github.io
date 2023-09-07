@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chess programming</title>
+        <link rel="stylesheet" href="./default.css">
+      </head>
+    <body>
+        <h1>Chess Programming</h1>
+        <p class="subheader1">How to program a retro (non-neural-network) chess program in Lua.</p>
+
+        <div class="nav">
+            <a class="navlink" href="./index.html">Home</a>
+        
+            <a class="navlink" href="./basics.html">Basics</a>
+            <a class="navlink" href="./tactics.html">Tactics</a>
+            <a class="navlink" href="./strategy.html">Strategy</a>
+            <a class="navlink" href="./openings.html">Openings</a>
+            <a class="navlink" href="./matingpatterns.html">Mating patterns</a>
+        
+            <a class="navlink" href="./champions.html">World Champions</a>
+            <a class="navlink" href="./notables.html">Notable Players</a>
+        
+            <a class="navlink" href="./articles.html">Chess programming</a>
+            <a class="navlink" href="./tic80.html">Chess programs</a>
+        </div>
+        
+        <p>This page still under construction. Thank you for your patience.</p>
+
+        <h2>Introduction</h2>
+        <p>This page will describe in brief how to program a chess engine in Lua.</p>
+        <p>This is not aimed at first time programmers, and is not an introduction to Lua, which is the programming language used in this guide, nor is it an introduction to TIC-80 which is the retro programming environment it shall be using.</p>
+
+        <h2>The board</h2>
+        <p></p>
+
+        <h2>Representing the pieces</h2>
+        <p></p>
+
+        <h2>Evaluating a given position</h2>
+        <p>The more accurate the evaluation of a position, the better the play of an AI using the evaluation of positions that will arise in a few moves time.</p>
+        <p>However, it is also important that the evaluation of a given position be reasonably fast - the AI is going to be making thousands of moves and examining thousands of positions, and we don't want to slow it down unnecessarily. As such, we are only looking for a few rules that give decent play (not necessarily great play).</p>
+        <p>The evaluation points that give us good play for (hopefully) little processing are:</p>
+        <ul>
+            <li>The material balance.</li>
+            <li>Attack versus defence on particular squares.</li>
+            <li>How much material is threatened.</li>
+            <li>Occupation of squares near the opponent's King.</li>
+            <li>Control of squares near the opponent's King.</li>
+            <li>Occupation of the centre.</li>
+            <li>Control of the centre.</li>
+            <li>Pawn advances.</li>
+            <li>Passed Pawn exists.</li>
+            <li>King in safety.</li>
+            <li>King has adjacent Pawn guard.</li>
+            <li>Queens, Rooks, and Bishops lined up against the King.</li>
+            <li>Queens, Rooks, and Bishops lined up against unprotected pieces.</li>
+        </ul>
+        <p>In programming chess, how we are going to evaluate the position has to be kept in mind because it can influence decisions we make. Certain programming choices will allow the evaluation to be a little faster, and other programming choices will make it a little slower. In this respect, what we are perhaps most interested in is: where the King is, where the Pawns are, and how many attackers and defenders influence each square.</p>
+
+        <h2>Vectors of the pieces</h2>
+        <p></p>
+
+        <h2>Creating a movelist</h2>
+        <p></p>
+
+        <h2>Checking for check</h2>
+        <p></p>
+
+        <h2>Attaching a new board to each move</h2>
+        <p></p>
+
+        <h2>Checking for checkmate</h2>
+        <p></p>
+
+        <h2>Player interaction</h2>
+        <p></p>
+
+        <h2>Minmax AI with alpha-beta pruning</h2>
+        <p></p>
+
+        <h2>Other matters</h2>
+        <p></p>
+
+        <div class="nav">
+            <a class="navlink" href="./index.html">Home</a>
+        
+            <a class="navlink" href="./basics.html">Basics</a>
+            <a class="navlink" href="./tactics.html">Tactics</a>
+            <a class="navlink" href="./strategy.html">Strategy</a>
+            <a class="navlink" href="./openings.html">Openings</a>
+            <a class="navlink" href="./matingpatterns.html">Mating patterns</a>
+        
+            <a class="navlink" href="./champions.html">World Champions</a>
+            <a class="navlink" href="./notables.html">Notable Players</a>
+        
+            <a class="navlink" href="./articles.html">Chess programming</a>
+            <a class="navlink" href="./tic80.html">Chess programs</a>
+        </div>
+        
+    </body>
+</html>

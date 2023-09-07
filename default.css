@@ -1,42 +1,94 @@
-body{border:0px;padding:0px;margin:0px;background-color:white;}
+body{
+    border:0px;padding:0px;margin:0px;
+    padding-bottom:6em;
+    background-color:#EEEEFF;color:#202033;
+}
 
-div#skillarea{margin:auto;width:80em;}
-div#skillarea div{display:inline-block;margin:auto;width:80em;}
+div{
+    border:0px;padding:1em;margin:0px;
+}
+div#skillarea{
+    border:0px;padding:0px;margin:0px;
+    margin:auto;width:80em;
+}
+div#skillarea div{
+    border:0px;padding:0px;margin:0px;
+    display:inline-block;margin:auto;width:80em;
+}
 
 p{border:0px;padding:5px;margin:5px;}
-h1,h2,h3,h4,h5,h6{border:0px;padding:0px;margin:0px;
-padding-left:4px;
+h1,h2,h3,h4,h5,h6{
+    border:0px;padding:0px;margin:0px;
+    padding-left:4px;
 }
 
 h1{
-text-align:left;
-background-color:lightgray;
-clear:both;
+    text-align:left;
+    background-color:lightgray;
+    clear:both;
+}
+p.subheader1{
+    margin:0px;
+    text-align:left;
+    background-color:lightgray;
+    clear:both;
 }
 
 h2{
-margin-top:0.5em;
-text-align:left;
-background-color:lightgray;
-clear:both;
+    margin-top:0.5em;
+    text-align:left;
+    background-color:lightgray;
+    clear:both;
+    border-top:darkgray solid 2px;
+    border-bottom:darkgray solid 2px;
 }
 
 h3{
-margin-top:1em;
-margin-bottom:1em;
-text-align:left;
-background-color:lightgray;
-clear:both;
+    margin-top:1em;
+    margin-bottom:1em;
+    text-align:left;
+    background-color:lightgray;
+    clear:both;
 }
 
 br{
-clear:left;
+    clear:left;
 }
 
+
+
+
+a.navlink{
+    padding:4px;
+    line-height:1em;
+    border:black solid 2px;
+    border-style:outset;
+    background-color:#EECCDD;
+    margin-right:0.5em;
+    display:inline-block;
+}
+
+a.navlink:hover{
+    background-color:#FFDDCC;
+}
+
+div.nav{
+    border-top: #202033 solid 1px;
+    border-bottom: #202033 solid 1px;
+    line-height:2em;
+    /*background-color:#AACCCC;*/
+    background-color:lightgray;
+}
+
+
+
+
+
+
 table{
-border:0px;padding:0px;
-display:inline-block;vertical-align:top;
-margin:1em;right-margin:0em;bottom-margin:0em;
+    border:0px;padding:0px;
+    display:inline-block;vertical-align:top;
+    margin:1em;right-margin:0em;bottom-margin:0em;
 }
 
 
@@ -44,16 +96,22 @@ table, td{border-collapse:collapse;}
 
 tr{border:0px;padding:0px;margin:0px;width:0px;height:0px;background-color:white}
 
-td.square{
-padding:0px;margin:0px;border:0.1em solid black;
-font-size:1.5em;
-width:1.3em;height:1.3em;
-text-align:center;vertical-align:middle;
+td.black{
+    padding:0px;margin:0px;border:0.1em solid black;
+    font-size:1.5em;
+    width:1.3em;height:1.3em;
+    text-align:center;vertical-align:middle;
+
+    background-color:lightgray
 }
+td.white{
+    padding:0px;margin:0px;border:0.1em solid black;
+    font-size:1.5em;
+    width:1.3em;height:1.3em;
+    text-align:center;vertical-align:middle;
 
-
-td.black{background-color:lightgray}
-td.white{background-color:white}
+    background-color:white
+}
 
 td.top{border-top:0.4em inset black;}
 td.left{border-left:0.4em inset black;}
@@ -61,33 +119,36 @@ td.right{border-right:0.4em outset black;}
 td.bottom{border-bottom:0.4em outset black;}
 
 td.info{
-border:none;
-font-size:1em;
-width:14em;
-height:1.5em;
-text-align:center;vertical-align:middle;
+    border:none;
+    font-size:1em;
+    width:14em;
+    height:1.5em;
+    text-align:center;vertical-align:middle;
 }
 
 td.key{
-border:1px solid black;
-font-size:1em;
-height:1.5em;
-text-align:center;
-vertical-align:middle;
-padding:.1em;
+    border:1px solid black;
+    font-size:1em;
+    height:1.5em;
+    text-align:center;
+    vertical-align:middle;
+    padding:.1em;
 }
 
 caption {
-border:1px solid black;
-padding:.1em;
-font-weight:bold;
+    border:1px solid black;
+    padding:.1em;
+    font-weight:bold;
 }
 
 td.coord{
-background:none;
-border:none;
-font-size:1em;
-text-align:center;vertical-align:middle;
+    padding:0px;margin:0px;
+    width:1.3em;height:1.3em;
+    font-size:1em;
+    text-align:center;vertical-align:middle;
+
+    background-color:#EEEEFF;
+    border:none;
 }
 
 th{
@@ -108,15 +169,6 @@ td{
     vertical-align:middle;
     padding:.1em;
 }
-
-
-
-
-
-
-
-
-
 
 
 
