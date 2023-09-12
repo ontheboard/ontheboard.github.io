@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  
+        <link rel="stylesheet" href="./default.css">
+        <style>
+            body{background-color:white;color:black;}
+            td{background-color:white;color:black;}
+            td.coord{background-color:white;color:black;}
+        </style>
+
+        <script src="./chessboard.js"></script>
+        <script src="./matingpatterns.js"></script>
+
+        <title>
+        Checkmate Patterns
+        <!-- printer friendly version -->
+        </title>
+        
+    </head>
+
+    <body onload="init();">
+
+        <h1>Checkmate Patterns</h1>
+
+        <h2>Tactical Skills</h2>
+        <div id="skillarea"></div>
+
+        <h2>Rook Patterns</h2>
+        <div id="linearpatternarea"></div>
+
+        <h2>Back rank mates</h2>
+        <div id="backrankpatternarea"></div>
+
+        <h2>Artificial wall mates</h2>
+        <p>Where two or more friendly pieces attack sufficient squares to provide a barrier impassable to the enemy king, allowing it to be checkmated as with a back rank mate. Such barriers are also useful for forcing the king's movements.</p>
+        <div id="artificialwallpatternarea"></div>
+
+        <h2>Edge file mates</h2>
+        <p>Where a back-rank-like mate occurs against a side edge of the board.</p>
+        <div id="edgefilepatternarea"></div>
+
+        <h2>Bishop Patterns</h2>
+        <div id="diagonalpatternarea"></div>
+
+        <h2>Knight Patterns</h2>
+        <div id="knightpatternarea"></div>
+
+        <h2>Queen Patterns</h2>
+        <div id="queenpatternarea"></div>
+
+        <h2>Queen Up-close Patterns</h2>
+        <div id="upclosepatternarea"></div>
+
+        <h2>Queen and one blocked diagonal Patterns</h2>
+        <p>The protected queen delivers the mate using an edge of the board, and with the one diagonal escape square blocked, often by an enemy piece.</p>
+        <div id="oneblockeddiagonalpatternarea"></div>
+
+        <h2>Epaulettes (Shoulderpads) and Gueridon (Table) Checkmates</h2>
+        <div id="epaulettespatternarea"></div>
+
+        <h2>Pawn Patterns</h2>
+        <div id="pawnpatternarea"></div>
+
+
+    </body>
+</html> 
