@@ -79,9 +79,21 @@ div.nav{
     /*background-color:#AACCCC;*/
     background-color:lightgray;
 }
+   
+
+blockquote{
+    padding:1em;
+    border-top: gray solid 1px;
+    border-bottom: gray solid 1px;
+}
 
 
 
+
+
+
+
+/*TABLES*/
 
 
 
