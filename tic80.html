@@ -112,8 +112,113 @@
   <p>
     A retro downhill slalom game. Avoid the trees and rocks. Ski close to the flags to get points.
   </p>
+  <p>
+    Hint: You want where your feet meet the skis to be just above where the flag meets the ground to score a point for the flag. This can be a little tricky at first.
+  </p>
   <p>Skier uses only two keys, the left and right cursor keys.</p>
   <p><a href="./skier/play.html">Play Skier</a></p>
+
+  <h2>BeebEm / BBC Microcomputer Chess Programmes</h2>
+  <p>
+    BeebEm is an emulator for the BBC Microcomputer.
+    The BBC Microcomupter was available between 1981 and 1994.
+    The best chess programmes* for it were those programmed by <a href="https://en.wikipedia.org/wiki/Martin_Bryant_(programmer)">Martin Bryant</a>, John Haig, and <a href="https://www.chessprogramming.org/Chess_(David_Thompson)">David Thompson</a>.
+    As these did not use neural networks, the strength was well below that of modern chess programmes.
+  </p>
+  <p>
+    *I've switched to British spelling of 'programme' rather than 'program' under the influence of nostalgia for the BBC Microcomputer.
+  </p>
+  <p>
+    Martin Bryant's <a href="https://www.chessprogramming.org/Colossus_Chess">Colossus 4.0</a> took part in the <a href="https://www.chessprogramming.org/USOCCC_1988"> Fourth United States Open Computer Chess Championship (1988)</a> and placed 3rd out of 4 entrants.
+    Martin Brant's White Knight and Colossus both took part in the <a href="https://www.chessprogramming.org/European_MCC_1983">European Microcomputer Chess Championship</a> in 1983, placing 5th and 7th, respectively, out of 14 entrants.
+    They are sure to have taken part in other similar tournaments at the time.
+  </p>
+  <p>
+    According to <a href="https://en.wikipedia.org/wiki/Colossus_Chess">wikipedia</a> Colossus Chess 'featured time-controlled play with game clocks, an opening book with 3,000 positions, and problem-solving mode that could solve normal mates, selfmates and helpmates' and 'Uncommon for microcomputer chess programs of the era, Colossus had a full implementation of the rules of chess, including underpromotion, the fifty-move rule, draw by repetition, and draw by insufficient material. Colossus was also able to execute all the basic checkmates, including the difficult bishop and knight checkmate'.
+    From my recollection, it quickly gets its rooks into the centre of the board from where they can provide strong attacks, and it could have a search-depth of 8 plies, which for the era it was programmed in was very deep and made it strong (well, strong for something running on a home computer designed in the 1980s).
+  </p>
+  <p>
+    As these programmes are available today to play for free, here are offsite links to BeebEm and to the listings for the chess programmes on <a href="http://www.bbcmicro.co.uk">bbcmicro.co.uk</a>.
+    I have listed the programmes in approximate order of playing strength - <a href="https://en.wikipedia.org/wiki/Colossus_Chess">Colossus</a> is the strongest of these.
+    The programmes can actually be played online, but the online emulator is not as good as the downloadable BeebEm.
+
+    <ul>
+      <li><a href="http://www.mkw.me.uk/beebem/index.html">BeebEm</a></li>
+      <li><a href="http://www.bbcmicro.co.uk/game.php?id=833">Martin Bryant's Colossus</a></li>
+      <li><a href="http://www.bbcmicro.co.uk/game.php?id=827">Martin Bryant's White Knight 12</a></li>
+      <li><a href="http://www.bbcmicro.co.uk/game.php?id=792">Martin Bryant's White Knight 11</a></li>
+      <li><a href="http://www.bbcmicro.co.uk/game.php?id=796">John Haig's Chess</a></li>
+      <li><a href="http://www.bbcmicro.co.uk/game.php?id=3772">John Haig's Chess for Model A BBC Microcomputer</a></li>
+      <li><a href="http://www.bbcmicro.co.uk/game.php?id=2395">David Thompson's (Superior Software) Chess</a></li>
+      <li><a href="http://www.bbcmicro.co.uk/game.php?id=955">David Thompson's (Computer Concepts) Chess</a></li>
+      <li><a href="http://www.bbcmicro.co.uk/game.php?id=1065">Beeb Chess (Bug-Byte)</a></li>
+      <li><a href="http://www.bbcmicro.co.uk/game.php?id=924">Arthur Norman and Nick Pelling's Acornsoft Chess</a></li>
+    </ul>
+  </p>
+  <p>
+    chesscomputeruk has a <a href="http://www.chesscomputeruk.com/html/chess_computers_-_the_uk_story.html">good history of chess computers in the UK</a>.
+  </p>
+
+  <h2>Fantasy Console Chess Programmes</h2>
+  <p>
+    A fantasy console is an '<a href="https://en.wikipedia.org/wiki/Fantasy_video_game_console">emulator for a fictional video game console</a>'.
+    Two popular examples are the <a href="">Pico-8</a> and the <a href="">Tic-80</a> (fantasy) consoles.
+    A fantasy console provides a place for programmers to write retro games.
+  </p>
+  <p>
+    Both pico-8 and Tic-80 use <a href="https://www.lua.org/">Lua</a> which can be found out about through the online version of <a href="https://www.lua.org/pil/contents.html">Programming In Lua (PIL)</a>.
+  </p>
+  <p>
+    Here is a short list of chess programmes available from the pico-8 and Tic-80 communities.
+    None of them use neural networks.
+    Only Quick Chessyness has an opening book.
+    Pico-Checkmate and Sweezechess extend their depth of search when they notice checks or captures;
+    even Remcode's AI in Sweezechess only has a depth of two plies unless it sees a check or capture,
+    which can lead to it mistaking non-capturing non-checking moves for good (this is fairly standard for an old-school chess AI).
+  </p>
+  <p>
+    Again, they are listed in order from best to worst.
+    However, Pico-Checkmate (the best of them) gives a less interesting game than the others as it always plays the same moves (it has no random bias).
+
+    <ul>
+      <li><a href="https://www.lexaloffle.com/bbs/?tid=31213">Krystman's Pico Checkmate</a> (pico-8)</li>
+      <li><a href="https://www.lexaloffle.com/bbs/?tid=48948">Adam Howell's Quick Chessyness</a> (pico-8)</li>
+      <li><a href="https://www.lexaloffle.com/bbs/?pid=87297#p">MeinSweeze's SweezeChess (Remcode's bugfix version)</a> (pico-8)</li>
+      <li><a href="https://tic80.com/play?cart=724">UmSingeloPugManco's Tichess</a> (Tic-80)</li>
+      <li><a href="https://www.lexaloffle.com/bbs/?tid=47884">Zeeph's Chess Engine</a> (pico-8)</li>
+    </ul>
+  </p>
+
+  <p>
+    Krystman's Pico Checkmate is a highly animated version.
+    Krystman decided to make it 'juicy' graphically.
+    Although probably the strongest of the fantasy console chess programmes, it does not feature an opening book and has no random bias added to the moves so will always play the same moves - which means it doesn't give a good variety of game.
+    For me it's also a little too juicy - I find the movement of the cursor (the hand) to be distracting, but I suspect most people will not have a problem with this.
+  </p>
+  <p>
+    Adam Howell's Quick Chessyness is something of a pleasure to play against.
+    It has an opening book (the only one of these fantasy console offerings to feature this), is generally quick to make its moves, tries to avoid exchanges, and has some positional grasp.
+    It will also find checkmates more easily than Pico Checkmate.
+    It still makes mistakes, but for enjoyment this one might come out in top place.
+  </p>
+  <p>
+    I have given the permalink to Remcode's version of MeinSweeze's Sweezechess - it includes a number of important bugfixes and additional AI levels.
+    Remcode's version is otherwise found some way down the comments for the original listing by MeinSweeze, and is easily missed, which is a shame, as its improvements are essential.
+    For variety of AI, this one comes out on top - MeinSweeze included an entirely random AI, as well as two slightly better AI, and remcode has added more to that with deeper depths of search (though the deeper they look the slower they get).
+    The original version is at the top of the page, and its play is erratic because of the bugs.
+    About the only two bugs remcode's version hasn't fixed are the not-quite-white-noise and a minor bug about getting out of check with an en-passant capture; it also adds a visual bug when playing as black regarding the placement of the line it is thinking about (whereas-as white-it places this extra information in very sensible places).
+    There is also a crashing bug when the programme switches between some AI (something to do with the way MeinSweeze has coded one of the lower AI, I think).
+    These bugs are very minor (but turn your sound off when playing this one).
+  </p>
+  <p>
+    I cannot recommend Tichess - the programmer has made some unusual design choices that do not work well.
+    In particular, the game plays left to right (this will be fine on a tablet lying on a table perhaps), and the pieces have no border making them a little tricky to discern - particularly the black pieces on black squares and the white pieecs on white squares.
+    It also features a flashing cursor that I find distracting, although it is at least in keeping with the 'retro' idea of the fantasy consoles.
+    In spite of these design problems, games against it can be quite enjoyable, and give a good opportunity to practise combinations leading to checkmates.
+  </p>
+  <p>
+    Zeeph's Chess Engine is particularly weak and should not present much of a challenge to anyone but a beginner at chess once its playing style is familiar.
+  </p>
 
   <div class="nav">
     <a class="navlink" href="./index.html">Home</a>
