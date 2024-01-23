@@ -91,12 +91,12 @@
   <p>
     Coffee Chess is weak; on a scale of one to ten, it might be rated as a three.
     Most older experienced club players should be able to beat it once they get used to its idiosyncratic style of play.
-    Experienced junior club players may still have difficulty beating it.
+    Experienced junior club players may still have difficulty beating it; to them, my advice is: after the opening, redirect some of your pieces to attack elsewhere.
   </p>
   <p>
     During play, it performs a two ply lookahead (one full move), extending the lookahead for exchanges.
-    Its evaluation of board positions looks first at material, then at position relative to the opponent's king (a presumption is made that the king has not moved), then considers position on the board (central and advanced squares are worth more).
-    It values highly advanced pawn positions - if you look at the screenshot above you will see that as black it has built up a wall of five pawns.
+    Its evaluation of board positions looks first at material, then at position relative to the opponent's king (a presumption is made that the king has not moved during the lookahead), then considers position on the board (central and advanced squares are worth more).
+    It values highly advanced pawn positions - if you look at the screenshot above you will see that--in command of the black pieces--Coffee Chess has built up a wall of five pawns.
     For its first few moves it is likely to play pawns forwards, particularly on the c and f files.
     Because it follows exchanges through to their conclusion, it is resistant against gradual build up of force against a particular pawn/piece.
     However, it is susceptible to forks and discovered attacks.
@@ -175,14 +175,15 @@
         <th>level</th>
         <th>min search depth</th>
         <th>max search depth</th>
+        <th>level description</th>
       </tr>
     </thead>
     <tbody>
-      <tr><td>1</td><td>1</td><td>2</td></tr>
-      <tr><td>2</td><td>2</td><td>4</td></tr>
-      <tr><td>3</td><td>3</td><td>4</td></tr>
-      <tr><td>4</td><td>3</td><td>6</td></tr>
-      <tr><td>5</td><td>4</td><td>6</td></tr>
+      <tr><td>1</td><td>1</td><td>2</td><td>Suitable for progressing beginners.</td></tr>
+      <tr><td>2</td><td>2</td><td>4</td><td>May get the occasional win even against strong club players.</td></tr>
+      <tr><td>3</td><td>3</td><td>4</td><td>Challenging for average club players.</td></tr>
+      <tr><td>4</td><td>3</td><td>6</td><td>Challenging even for experienced club players.</td></tr>
+      <tr><td>5</td><td>4</td><td>6</td><td>Slow but should prove challenging even for experienced strong club players.</td></tr>
     </tbody>
   </table>
   <p><a href="./chessix/play.html">Play Chessix</a></p>
