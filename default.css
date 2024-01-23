@@ -100,7 +100,7 @@ blockquote{
 table{
     border:0px;padding:0px;
     display:inline-block;vertical-align:top;
-    margin:1em;right-margin:0em;bottom-margin:0em;
+    margin:1em;margin-right:0em;margin-bottom:0em;
 }
 
 
@@ -133,7 +133,7 @@ td.bottom{border-bottom:0.4em outset black;}
 td.info{
     border:none;
     font-size:1em;
-    width:14em;
+    width:30em;
     height:1.5em;
     text-align:center;vertical-align:middle;
 }
