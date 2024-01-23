@@ -46,6 +46,71 @@
   <p>Unless otherwise stated, these chess programs do not use neural networks, and as such will not present a robust tactical challenge, nor have whatever advantage of speed comes from using neural networks. This can be seen as being in the spirit of programming for a retro console.</p>
   <p>TIC-80 does not make available commands for export of data, because of which the chess programs here do not allow saving or export of games.</p>
 
+
+  <h2>Chess</h2>
+  <p>
+    <a href="./chess2321/play.html">
+    <img src="./chess2321/Screenshot_20240120-225013.png" width="488px" height="240px" alt="chessboard with black central pawn front and white protected passed pawn on the kingside" />
+    </a>
+  </p>
+  <p>
+    This version of chess, <a href="./chess2321/play.html">Chess-</a> is programmed in <a href="https://www.lua.org/about.html">Lua</a> for the <a href="https://en.wikipedia.org/wiki/TIC-80">TIC-80</a> environment.
+    During development it had the name 'minichess' - the aim was to produce a short (not shortest) programme without any frills; it came to about 14k of Lua code.
+    Since deciding to put it online, it has had a few frills added - a game record, slide animation, audio, buttons, mouse and touch-screen control. It now comes in at about 25k, but the core functionality is still just 14k.
+  </p>
+  <p>Chess- can be played with a touch screen, with a controller, with a mouse, or with the keyboard.</p>
+  <h4>Chess- keyboard controls</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>key</th><th>action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>cursor keys</td><td>movement on the board</td>
+      </tr>
+      <tr>
+        <td>z</td><td>select a piece<br />select square to move selected piece to</td>
+      </tr>
+      <tr>
+        <td>x</td><td>rotate the board</td>
+      </tr>
+      <tr>
+        <td>a</td><td>demo mode toggle</td>
+      </tr>
+      <tr>
+        <td>s</td><td>swap sides</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>
+    Chess- is weak; on a scale of one to ten, it might be rated as a three.
+    Most experienced club players should be able to beat it once they get used to its idiosyncratic style of play.
+  </p>
+  <p>
+    During play, it performs a two ply lookahead (one full move), extending the lookahead for exchanges.
+    Its evaluation of board positions looks first at material, then at position relative to the opponent's king (a presumption is made that the king has not moved), then considers position on the board (central and advanced squares are worth more).
+    It values highly advanced pawn positions - if you look at the screenshot above you will see that as black it has built up a wall of five pawns.
+    For its first few moves it is likely to play pawns forwards, particularly on the c and f files.
+    Because it follows exchanges through to their conclusion, it is resistant against gradual build up of force against a particular pawn/piece.
+    However, it is susceptible to forks and discovered attacks.
+  </p>
+  <p>
+    Chess- :
+  </p>
+  <ul>
+    <li>Takes maybe 20 seconds per move.</li>
+    <li>Correctly handles castling and en passant.</li>
+    <li>Recognises checkmates and stalemates.</li>
+    <li>Does not identify draw by threefold repetition or draw by the fifty move rule.</li>
+    <li>Promotes to a queen, but can not underpromote - it's always a queen.</li>
+    <li>Does not have an opening book, and is very idiosyncratic in the opening.</li>
+    <li>Has some flaws in its logic which leads to it throwing away its queen or rooks occasionally. Its play is weak enough that improving this would still be unlikely to affect the outcome of the game, and is therefore not worth doing.</li>
+  </ul>
+  <p><a href="./chess2123/play.html">Play Chess-</a></p>
+
+
   <h2>Chessix</h2>
   <p>
     <a href="./chessix/play.html">
