@@ -100,7 +100,8 @@ blockquote{
 table{
     border:0px;padding:0px;
     display:inline-block;vertical-align:top;
-    margin:1em;margin-right:0em;margin-bottom:0em;
+    margin:1em;
+    /*margin-right:0em;margin-bottom:0em;*/
 }
 
 

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Chess programs</title>
+  <title>Chess programmes</title>
   <link rel="stylesheet" href="./default.css">
 </head>
 <body>
-  <h1>Chess programs</h1>
+  <h1>Chess programmes</h1>
   
   <div class="nav">
     <a class="navlink" href="./index.html">Home</a>
@@ -16,7 +16,7 @@
     <a class="navlink" href="./openings.html">Openings</a>
     <a class="navlink" href="./matingpatterns.html">Mating patterns</a>
 
-    <a class="navlink" href="./tic80.html">Chess programs</a>
+    <a class="navlink" href="./tic80.html">Chess programmes</a>
 
     <br />
         
@@ -29,40 +29,129 @@
     <a class="navlink" href="./books.html">Books</a>
   </div>
 
-  <h2>TIC-80</h2>
-  <p>
-    This page is the index for a few chess programs for the TIC-80 emulator, and perhaps some other programs too.
-  </p>
-  <p>
-      <a href="https://tic80.com/"">TIC-80</a> is 'a free and open-source fantasy video game console for making, playing, and sharing games on a limited platform that mimics the 8-bit systems of the 1980s.' (Source: <a href="https://en.wikipedia.org/wiki/TIC-80">wikipedia</a>)
-  </p>
-  <p>
-      A variety of programming languages can be used with TIC-80, amongst them the easy to use <a href="https://www.lua.org/about.html">Lua</a>, which is what the programs here use.
-  </p>
-  <h4>Limitations of TIC-80</h4>
-  <p>'As a fantasy console, TIC-80 has some set limitations in terms of graphics and processing power in order to create a "retro-styled" gaming experience. These limitations include a 240x136 display; a 16 color palette; 256 8x8 sprites; and 4-channel sound.'<br />(Source: wikipedia. Date of access: 6th September 2023)</p>
-  <p>TIC-80 programs run in an emulated environment. This can make them slower than programs/apps which run natively on a computer. Furthermore, TIC-80 programs for the web run on top of a browser that uses JavaScript, and as such will be slower still.</p>
+  <h2>Page index</h2>
+  <ul>
+    <li><a href="./tic80.html#levelnotes">Playing level of programmes</a> - general notes about the playing level of the programmes hosted on this site.</li>
+    <li><a href="./tic80.html#januarychess">January Chess</a> - generally aggressive but often unsound.</li>
+    <li><a href="./tic80.html#coffeechess">Coffee Chess</a> - a defensive but weak programme.</li>
+    <li><a href="./tic80.html#chessix">Chessix</a> - a minichess variant on a 6 by 6 board. Also comes with a 4 by 8 minichess variant.</li>
+    <li><a href="./tic80.html#evaluation">Evaluation algorithm notes</a> - a quick generalised overview of technical considerations of the programmes on this site.</li>
+    <li><a href="./tic80.html#bbcmicrocomputer">BeebEm / BBC Microcomputer Chess</a> - external links to 80s chess programmes available for free, best played on the emulator BeebEm.</li>
+    <li><a href="./tic80.html#fantasyconsoles">Fantasy Consoles</a> - external links through to chess programmes for Pico-8 and Tic-80.</li>
+    <li><a href="./tic80.html#tic80">Tic 80 limitations</a> - general notes about the Tic-80 environment and programmes hosted on this site.</li>
+    <li><a href="./tic80.html#skier">Skier</a> - a two-button retro TIC80 programme, just for fun, not chess related.</li>
+  </ul>
+  <p></p>
 
-  <h4>Limitations of the chess programs here</h4>  
-  <p>Unless otherwise stated, these chess programs do not use neural networks, and as such will not present a robust tactical challenge, nor have whatever advantage of speed comes from using neural networks. This can be seen as being in the spirit of programming for a retro console.</p>
-  <p>TIC-80 does not make available commands for export of data, because of which the chess programs here do not allow saving or export of games.</p>
-
-  <h4>Playing level of the chess programs here</h4>  
+  <h2 id="levelnotes">Playing level of programmes</h2>
   <p>
     Internal to the programmes, the levels only represent easier or harder, with lower or higher numbers respectively.
     As such they do not correspond to any approximation of Elo rating.
   </p>
+
   <p>
-    On this page--as opposed to inside the programmes--where I give a numerical value out of ten, this corresponds approximately to a range of 300 Elo.
-    This is only a best-guess from me, and does not indicate any official rating.
-    So, if a program is rated as one out of ten, it would cover the range 0 to 300 Elo, and be suitable for beginners.
-    Three out of ten will cover the range 600 to 900 Elo approximately, and will be suitable for progressing beginners.
-    Five out of ten will cover the range 1200 to 1500 Elo approximately, and will be suitable for stronger club players, though perhaps seeming a little weak to the strongest club players.
-    Most of the programmes here will be rated three, four, or five out of ten.
+    The TIC-80 chess programmes on this page--January Chess, Coffee Chess, Chessix--likely all are in the range of 600 to 1500 Elo, probably often near to 1200 Elo.
+    This is based on my own observation of them, rather than any officially gained rating.
+    This makes them suitable for progressing beginners and regular club players.
+    Stronger club players may find them a little weak, but may anyway enjoy playing against some of them just to see how they play.
+  </p>
+  <p>
+    I have tried to order them on the page by those I find stronger at the top, and those I find weaker lower down.
+    The exception to this is Chessix, which is probably the strongest programme here, and can be found after the regular chess games.
+    It is stronger because, as it is a minichess variant, it only has to consider 36 squares on the board rather than 64, and only 24 pieces rather than 32.
+  </p>
+  <p>
     For stronger or weaker opposition, please try a more 'company' and less 'personal project' site, such as <a href="https://www.chess.com">chess.com</a> .
+    There are also other links to off-site chess programmes lower down the page; these may be stronger or weaker than those here.
   </p>
 
-  <h2>Coffee Chess</h2>
+  <h4>Limitations of the chess programmes here</h4>  
+  <p>Unless otherwise stated, these chess programmes do not use neural networks, and as such will not present a robust tactical challenge, nor have whatever advantage of speed comes from using neural networks. This can be seen as being in the spirit of programming for a retro console.</p>
+  <p>
+    To keep the programmes reasonably fast, they are generally limited to a two ply lookahead (one full move), which is extended if the last of these is a capture or check.
+    In general, the more the lookahead is allowed to extend, the exponentionally slower the thinking, so even with these extended lookaheads they are normally limited to four ply.
+    These limited lookahead factors tend to make the programmes susceptible to tactical play, particularly forks.
+  </p>
+  <p>TIC-80 does not make available commands for export of data, because of which the chess programmes here do not allow saving or export of games.</p>
+
+  <h4>
+    Programme Quirks
+  </h4>
+
+  <p>None of these 'break' play during a game, and I consider them at a low level of priority.</p>
+  <ul>
+    <li>Some awkwardness with the audio, particularly at start-up, but on computers with less powerful processors, this can persist and become worse. If this is the case, in those programmes where there is one, please use the onscreen button to mute the audio. This is in fact a problem with the web build of the software - efforts have been made by the people behind Tic-80 to improve this in more recent releases, and I will upgrade at some point in the future to see if this ameliorates the problem. I'm holding off on upgrading because 1. Occasional slowness has been seen in two more recent builds. 2. The current SHA256 on the Tic-80 website is not up-to-date (this is probably an oversight rather than a real security concern).</li>
+    <li>The game record does not use the castling notation 'o-o' and 'o-o-o', instead indicating that the king has moved two squares, from which castling can be intuited.</li>
+    <li>A new game can only be started when the programme recognises checkmate or stalemate - if the position is drawn in a manner it does not recognise, then the page must be reloaded to start a new game.</li>
+  </ul>
+
+  <h2 id="januarychess">January Chess</h2>
+  <p>
+    <a href="./chess2312/play.html">
+    <img src="./chess2312/Screenshot_20240129-223720.png" width="488px" height="240px" alt="chessboard with black central pawn front and white protected passed pawn on the kingside" />
+    </a>
+  </p>
+  <p>
+    January Chess gets its name because the majority of its programming was done in January 2023 and January 2024.
+    During development it had the name 'Simple Chess' - the aim was to produce a programme that was easy to follow for less experienced programmers.
+  </p>
+  <p>January Chess can be played with a touch screen, with a controller, with a mouse, or with the keyboard.</p>
+  <h4>January Chess keyboard controls</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>key</th><th>action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>cursor keys</td><td>movement on the board</td>
+      </tr>
+      <tr>
+        <td>z</td><td>select a piece<br />select square to move selected piece to</td>
+      </tr>
+    </tbody>
+  </table>
+  <h4>
+    January Chess Play Style
+  </h4>
+  <p>
+    Its play is informed by positional tables with aspects of the Queen's Gambit or the French Defence.
+    Taking it out of that comfort zone--if a computer programme can be said to have such a thing--may provide an edge - play a king's pawn or flank opening.
+    Blocking the centre with pawns also seems to be reasonably effective against it.
+  </p>
+  <p>
+    It is generally overly agressive with its queen and its bishops, and this can often be used against it in the opening to gain a few tempi.
+  </p>
+  <p>
+    January Chess has turned out to be one of the stronger programmes I have programmed, and this is in spite of only having a maximum depth of four ply.
+    It should find it difficult to meet any exchanges that require a deeper lookahead, but in practice this is barely noticeable.
+    Due to its lookahead being only two ply unless there is a capture or check, it is extremely susceptible to forks.
+  </p>
+  <p>
+    As well as material, its evaluation considers pawn proximity to the kings, and has a hand crafted bias to positions similar to the Queen's Gambit or the French Defence, although this is not often noticeable.
+    These simple rules are in the spirit with which it was developed - Keep It Simple.
+  </p>
+  <h4>
+    January Chess Features and Limitations
+  </h4>
+  <ul>
+    <li>Takes maybe 20 seconds per move - a game should be over in ten to fifteen minutes.</li>
+    <li>Correctly handles castling and en passant.</li>
+    <li>Recognises checkmates and stalemates, but does not identify draw by threefold repetition or draw by the fifty move rule.</li>
+    <li>Promotes to a queen, but can not underpromote - it's always a queen.</li>
+    <li>Does not have an opening book, but has a positional rating system approximately distilled from positions similar to the Queen's Gambit and the French Defence.</li>
+    <li>Has some flaws in its logic which leads to sometimes overly optimistic counter-attacks.</li>
+    <li>Does not feature takeback or trace forwards.</li>
+    <li>Has a processor greedy (blocking) algorithm - this was written to keep the programming simple, but may cause problems on underpowered processors.</li>
+  </ul>
+
+  <p><a href="./chess2312/play.html">Play January Chess</a></p>
+
+
+
+
+  <h2 id="coffeechess">Coffee Chess</h2>
   <p>
     <a href="./chess2321/play.html">
     <img src="./chess2321/Screenshot_20240120-225013.png" width="488px" height="240px" alt="chessboard with black central pawn front and white protected passed pawn on the kingside" />
@@ -101,12 +190,15 @@
     Coffee Chess Play Style
   </h4>
   <p>
-    Coffee Chess is weak; on a scale of one to ten, it might be rated as a three.
+    Coffee Chess is defensive, looking to build up an equal number of defenders to its pieces as there are attackers.
     Most older experienced club players should be able to beat it once they get used to its idiosyncratic style of play.
     Experienced junior club players may still have difficulty beating it; to them, my advice is: after the opening, redirect some of your pieces to attack elsewhere.
   </p>
   <p>
     During play, it performs a two ply lookahead (one full move), extending the lookahead for exchanges.
+    Coffee Chess' extended lookahead does not in fact have a limited ply, but only looks at the specific square on which it first began the extended lookahead; this can create a misbelief in its evaluation that the exchange has to be followed through to the last capture on that square, as well as the lesser logic flaw of ignoring other potential moves elsewhere on the board in this extended lookahead.
+  </p>
+  <p>
     Its evaluation of board positions looks first at material, then at position relative to the opponent's king (a presumption is made that the king has not moved during the lookahead), then considers position on the board (central and advanced squares are worth more).
     It values highly advanced pawn positions - if you look at the screenshot above you will see that--in command of the black pieces--Coffee Chess has built up a wall of five pawns.
     For its first few moves it is likely to play pawns forwards, particularly on the c and f files.
@@ -126,21 +218,10 @@
     <li>Does not feature takeback or trace forwards.</li>
   </ul>
 
-  <h4>
-    Coffee Chess Known Bugs
-  </h4>
-
-  <p>None of these 'break' play during a game, and I consider them at a low level of priority.</p>
-  <ul>
-    <li>Some awkwardness with the audio, particularly at start-up, but on computers with less powerful processors, this can persist and become worse. If this is the case, please use the onscreen button to mute the audio. This is in fact a problem with the web build of the software - efforts have been made by the people behind Tic-80 to improve this in more recent releases, and I will upgrade at some point in the future to see if this ameliorates the problem. I'm holding off on upgrading because 1. Occasional slowness has been seen in two more recent builds. 2. The current SHA256 on the Tic-80 website is not up-to-date (this is probably an oversight rather than a real security concern).</li>
-    <li>The game record does not use the castling notation 'o-o' and 'o-o-o', instead indicating that the king has moved two squares, from which castling can be intuited.</li>
-    <li>A new game can only be started when Coffee Chess recognises checkmate or stalemate - if the position is drawn in a manner it does not recognise, then the page must be reloaded to start a new game.</li>
-  </ul>
-
-  <p><a href="./chess2123/play.html">Play Coffee Chess</a></p>
+  <p><a href="./chess2321/play.html">Play Coffee Chess</a></p>
 
 
-  <h2>Chessix</h2>
+  <h2 id="chessix">Chessix</h2>
   <p>
     <a href="./chessix/play.html">
     <img src="./chessix/chessix.png" width="488px" height="240px" alt="six by six square chessboard with checkmate position" />
@@ -192,40 +273,45 @@
       <tr><td>1</td><td>1</td><td>2</td><td>Suitable for progressing beginners.</td></tr>
       <tr><td>2</td><td>2</td><td>4</td><td>May get the occasional win even against strong club players.</td></tr>
       <tr><td>3</td><td>3</td><td>4</td><td>Challenging for average club players.</td></tr>
-      <tr><td>4</td><td>3</td><td>6</td><td>Challenging even for experienced club players.</td></tr>
-      <tr><td>5</td><td>4</td><td>6</td><td>Slow but should prove challenging even for experienced strong club players.</td></tr>
+      <tr><td>4</td><td>3</td><td>6</td><td>Slow but challenging even for experienced club players.</td></tr>
+      <tr><td>5</td><td>4</td><td>6</td><td>Slow but challenging even for experienced club players.</td></tr>
     </tbody>
   </table>
   <p><a href="./chessix/play.html">Play Chessix</a></p>
 
-  <h2>Skier</h2>
+    
+  <h2 id="evaluation">Evaluation algorithm notes</h2>
   <p>
-    <a href="./skier/play.html">
-    <img src="./skier/skier.png" width="488px" height="240px" alt="screenshot of skier game" />
-    </a>
+    The above programmes mostly use a variant of a <a href="https://en.wikipedia.org/wiki/Minimax">minmax algorithm</a> known as <a href="https://en.wikipedia.org/wiki/Negamax">negamax</a> with <a href="https://en.wikipedia.org/wiki/Alpha-beta_pruning">alpha-beta pruning</a>.
+    This is often made more effective by using <a href="https://www.chessprogramming.org/Move_Ordering">move-(re)ordering</a>, so that moves which are expected to do well are examined early, hopefully saving time by making it so that other moves do not need to be examined.
   </p>
   <p>
-    A retro downhill slalom game. Avoid the trees and rocks. Ski close to the flags to get points.
+    The evaluation algorithm for the programmes varies, but always pays attention to material first.
+    Other factors may include:
   </p>
-  <p>
-    I've included this here just for a break from chess.
-    Because sometimes a break is needed.
-  </p>
-  <p>
-    Hint: You want where your feet meet the skis to be just above where the flag meets the ground to score a point for the flag. This can be a little tricky at first.
-  </p>
-  <p>Skier uses only two keys, the left and right cursor keys.</p>
-  <p><a href="./skier/play.html">Play Skier</a></p>
+  <ul>
+    <li>Proximity to the enemy king of pieces.</li>
+    <li>Proximity to the enemy king of potential moves.</li>
+    <li>The worth of pieces targetted by potential captures.</li>
+    <li>Proximity to the other side of the board of the pawns.</li>
+    <li>Proximity to the centre of the pieces and pawns.</li>
+    <li>Proximity of the king to castled positions.</li>
+    <li>Proximity of the king to pawns (useful for both its own guard and attacking advanced pawns).</li>
+    <li>Alignment of queen, rooks, and bishops against the enemy king, and sometimes against other pieces.</li>
+    <li>Position of rooks on open files and on the seventh and eighth ranks.</li>
+    <li>Position of knights relative to the enemy king, based on their own unique movement.</li>
+    <li>Blockades, particularly pawn against knight.</li>
+    <li>Balance of number of attackers to number of defenders of pieces, and sometimes of squares.</li>
+    <li>Development - are the pieces off the start line?</li>
+  </ul>
 
-  <h2>BeebEm / BBC Microcomputer Chess Programmes</h2>
+  
+  <h2 id="bbcmicrocomputer">BeebEm / BBC Microcomputer Chess Programme Links</h2>
   <p>
     BeebEm is an emulator for the BBC Microcomputer.
     The BBC Microcomupter was available between 1981 and 1994.
-    The best chess programmes* for it were those programmed by <a href="https://en.wikipedia.org/wiki/Martin_Bryant_(programmer)">Martin Bryant</a>, John Haig, and <a href="https://www.chessprogramming.org/Chess_(David_Thompson)">David Thompson</a>.
+    The best chess programmes for it were those programmed by <a href="https://en.wikipedia.org/wiki/Martin_Bryant_(programmer)">Martin Bryant</a>, John Haig, and <a href="https://www.chessprogramming.org/Chess_(David_Thompson)">David Thompson</a>.
     As these did not use neural networks, the strength was well below that of modern chess programmes.
-  </p>
-  <p>
-    *I've switched to British spelling of 'programme' rather than 'program' under the influence of nostalgia for the BBC Microcomputer.
   </p>
   <p>
     Martin Bryant's <a href="https://www.chessprogramming.org/Colossus_Chess">Colossus 4.0</a> took part in the <a href="https://www.chessprogramming.org/USOCCC_1988"> Fourth United States Open Computer Chess Championship (1988)</a> and placed 3rd out of 4 entrants.
@@ -233,7 +319,7 @@
     They are sure to have taken part in other similar tournaments at the time.
   </p>
   <p>
-    According to <a href="https://en.wikipedia.org/wiki/Colossus_Chess">wikipedia</a> Colossus Chess 'featured time-controlled play with game clocks, an opening book with 3,000 positions, and problem-solving mode that could solve normal mates, selfmates and helpmates' and 'Uncommon for microcomputer chess programs of the era, Colossus had a full implementation of the rules of chess, including underpromotion, the fifty-move rule, draw by repetition, and draw by insufficient material. Colossus was also able to execute all the basic checkmates, including the difficult bishop and knight checkmate'.
+    According to <a href="https://en.wikipedia.org/wiki/Colossus_Chess">wikipedia</a> Colossus Chess 'featured time-controlled play with game clocks, an opening book with 3,000 positions, and problem-solving mode that could solve normal mates, selfmates and helpmates' and 'Uncommon for microcomputer chess programmes of the era, Colossus had a full implementation of the rules of chess, including underpromotion, the fifty-move rule, draw by repetition, and draw by insufficient material. Colossus was also able to execute all the basic checkmates, including the difficult bishop and knight checkmate'.
     From my recollection, it quickly gets its rooks into the centre of the board from where they can provide strong attacks, and it could have a search-depth of 8 plies, which for the era it was programmed in was very deep and made it strong (well, strong for something running on a home computer designed in the 1980s).
   </p>
   <p>
@@ -258,7 +344,7 @@
     chesscomputeruk has a <a href="http://www.chesscomputeruk.com/html/chess_computers_-_the_uk_story.html">good history of chess computers in the UK</a>.
   </p>
 
-  <h2>Fantasy Console Chess Programmes</h2>
+  <h2 id="fantasyconsoles">Fantasy Console Chess Programme Links</h2>
   <p>
     A fantasy console is an '<a href="https://en.wikipedia.org/wiki/Fantasy_video_game_console">emulator for a fictional video game console</a>'.
     Two popular examples are the <a href="">Pico-8</a> and the <a href="">Tic-80</a> (fantasy) consoles.
@@ -318,6 +404,36 @@
   <p>
     Zeeph's Chess Engine is particularly weak and should not present much of a challenge to anyone but a beginner at chess once its playing style is familiar.
   </p>
+  
+  <h2 id="tic80">TIC-80 notes and limitations</h2>
+  <p>
+      <a href="https://tic80.com/"">TIC-80</a> is 'a free and open-source fantasy video game console for making, playing, and sharing games on a limited platform that mimics the 8-bit systems of the 1980s.' (Source: <a href="https://en.wikipedia.org/wiki/TIC-80">wikipedia</a>)
+  </p>
+  <p>
+      A variety of programming languages can be used with TIC-80, amongst them the easy to use <a href="https://www.lua.org/about.html">Lua</a>, which is what the programmes here use.
+  </p>
+  <h4>Limitations of TIC-80</h4>
+  <p>'As a fantasy console, TIC-80 has some set limitations in terms of graphics and processing power in order to create a "retro-styled" gaming experience. These limitations include a 240x136 display; a 16 color palette; 256 8x8 sprites; and 4-channel sound.'<br />(Source: wikipedia. Date of access: 6th September 2023)</p>
+  <p>TIC-80 programmes run in an emulated environment. This can make them slower than programmes/apps which run natively on a computer. Furthermore, TIC-80 programmes for the web run on top of a browser that uses JavaScript, and as such will be slower still.</p>
+
+  <h2 id="skier">Skier</h2>
+  <p>
+    <a href="./skier/play.html">
+    <img src="./skier/skier.png" width="488px" height="240px" alt="screenshot of skier game" />
+    </a>
+  </p>
+  <p>
+    A retro downhill slalom game. Avoid the trees and rocks. Ski close to the flags to get points.
+  </p>
+  <p>
+    I've included this here just for a break from chess.
+    Because sometimes a break is needed.
+  </p>
+  <p>
+    Hint: You want where your feet meet the skis to be just above where the flag meets the ground to score a point for the flag. This can be a little tricky at first.
+  </p>
+  <p>Skier uses only two keys, the left and right cursor keys.</p>
+  <p><a href="./skier/play.html">Play Skier</a></p>
 
   <div class="nav">
     <a class="navlink" href="./index.html">Home</a>
